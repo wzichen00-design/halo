@@ -5,8 +5,8 @@
       "src": "ui/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build/dist/ui",
-        "buildCommand": "cd ui && echo '=== Environment Info ===' && node --version && npm --version && echo '=== Installing pnpm ===' && npm install -g pnpm@10.30.3 && pnpm --version && echo '=== Installing dependencies ===' && pnpm install --verbose && echo '=== Building project ===' && pnpm run build"
+        "distDir": "ui/build/dist/ui",
+        "buildCommand": "cd ui && pnpm install && pnpm run build"
       }
     }
   ],
