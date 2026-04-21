@@ -5,7 +5,7 @@
       "src": "ui/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "ui/build/dist/ui",
+        "distDir": "build/dist/ui",
         "buildCommand": "cd ui && pnpm install && pnpm run build"
       }
     }
