@@ -1,8 +1,20 @@
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "ui/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "ui/build/dist/ui",
+        "buildCommand": "cd ui && pnpm install && pnpm run build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "console.html",
+      "status": 200
     }
   ]
 }
