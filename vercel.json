@@ -1,15 +1,12 @@
 {
   "version": 2,
-  "env": {
-    "NODE_VERSION": "20"
-  },
   "builds": [
     {
       "src": "ui/package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "build/dist/ui",
-        "buildCommand": "cd ui && npm install -g pnpm@10.30.3 && pnpm install --frozen-lockfile && pnpm run build"
+        "buildCommand": "cd ui && echo '=== Environment Info ===' && node --version && npm --version && echo '=== Installing pnpm ===' && npm install -g pnpm@10.30.3 && pnpm --version && echo '=== Installing dependencies ===' && pnpm install --verbose && echo '=== Building project ===' && pnpm run build"
       }
     }
   ],
