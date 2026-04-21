@@ -101,3 +101,7 @@ coverage
 storybook-static
 tsconfig.tsbuildinfo
 .tgz
+
+### Runtime directory
+halo-workdir/
+application/halo-workdir/
